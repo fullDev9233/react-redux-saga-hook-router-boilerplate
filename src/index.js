@@ -1,16 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import toDoApp from './reducers';
+import { createStore, applyMiddleware } from 'redux';
+import createSagaMiddleware from 'redux-saga';
+import { BrowserRouter } from 'react-router-dom';
+
 import App from './App';
+import { loadToDoList } from './actions';
+import toDoApp from './reducers';
+import rootSaga from './sagas';
+
 import * as serviceWorker from './serviceWorker';
 
-const store = createStore(toDoApp);
+const sagaMiddleware = createSagaMiddleware();
+
+const store = createStore(toDoApp, applyMiddleware(sagaMiddleware));
+
+sagaMiddleware.run(rootSaga);
+
+store.dispatch(loadToDoList());
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </Provider>,
   document.getElementById('root')
 );
