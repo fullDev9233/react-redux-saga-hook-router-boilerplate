@@ -1,30 +1,21 @@
 import React from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
-import './App.css';
+import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <h1>App</h1>
-//       <button onClick={}></button>
-//     </div>
-//   );
-// }
 
 class App extends React.Component {
   render() {
     return(
-      <div className='App'>
-        <Router>
-          <button>
-            <Link to='/abs'>
-              Search
-            </Link>
-          </button>
-        </Router>
-        
-      </div>
+      <Container>
+        <Row className="row">
+          <Col xs={12}>
+            <h1>New React Bootstrap SPA</h1>
+            <Button>Click</Button>
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }
