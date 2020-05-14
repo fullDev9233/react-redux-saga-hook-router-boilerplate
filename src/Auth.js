@@ -5,7 +5,7 @@ const auth0Client = new auth0.WebAuth({
     domain: 'dev-nb2yuoca.auth0.com',
     audience: 'https://dev-nb2yuoca.auth0.com/api/v2/',
     clientID: 'a4XOXOOxniTECF7y7c27J7V6faVNvM2G',
-    redirectUri: 'http://localhost:3000',
+    redirectUri: 'https://localhost:3000/callback',
     responseType: 'id_token',
     // scope: 'openid profile email'
 });
