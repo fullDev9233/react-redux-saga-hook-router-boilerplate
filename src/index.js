@@ -9,8 +9,8 @@ import App from './App';
 import { loadToDoList } from './actions';
 import toDoApp from './reducers';
 import rootSaga from './sagas';
-
 import * as serviceWorker from './serviceWorker';
+
 
 const sagaMiddleware = createSagaMiddleware();
 
