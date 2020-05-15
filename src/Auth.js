@@ -32,7 +32,7 @@ export function handleAuthentication() {
 }
 
 export function signIn() {
-  auth0Client.authorize();
+    auth0Client.authorize();
 }
 
 export function signOut() {
