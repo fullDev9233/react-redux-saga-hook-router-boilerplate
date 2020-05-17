@@ -5,7 +5,6 @@ const initialState = {
 };
 
 export default function toDoApp(state=initialState, action) {
-    console.log(state)
     switch (action.type) {
         case RENDER_TODO_LIST:
             return {
