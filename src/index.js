@@ -26,7 +26,7 @@ const bindMiddleware = middleware => {
 };
 
 const store = createStore(toDoApp, bindMiddleware(middlewares));
-sagaMiddleware.run(rootSaga);
+sagaMiddleware.run(rootSaga); // fetch data from json using redux-saga
 
 store.dispatch(loadToDoList());
 
