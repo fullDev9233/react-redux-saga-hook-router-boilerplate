@@ -29,7 +29,7 @@ let AddToDo = ({ dispatch }) => {
                         }}
                     />
                     <InputGroup.Append>
-                        <Button type="submit">Add To-Do</Button>
+                        <Button type="submit">Add  To-Do</Button>
                     </InputGroup.Append>
                 </InputGroup>
             </Form.Group>
