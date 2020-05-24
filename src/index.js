@@ -10,7 +10,6 @@ import App from './App';
 import { loadToDoList } from './actions';
 import toDoApp from './reducers/index';
 import rootSaga from './sagas';
-// import Boot from './reducers/boot';
 import * as serviceWorker from './serviceWorker';
 
 
